@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ayık Şoför | Güvenli Eve Dönüş</title>
-
+<title>Ayık Şoför | Premium Güvenli Ulaşım</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --gold:#D4AF37;
-  --black:#000000;
+  --black:#000;
+  --dark:#111;
+  --card:#181818;
 }
 
 *{
@@ -23,127 +24,196 @@
 body{
   background:var(--black);
   color:var(--gold);
-  overflow:hidden;
 }
 
-/* VIDEO BACKGROUND EFFECT */
-.bg{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%);
-  z-index:-1;
-}
-
-/* CONTAINER */
-.container{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+/* HEADER */
+header{
   text-align:center;
-  padding:20px;
-  animation:fadeIn 2s ease-in-out;
+  padding:80px 20px 40px 20px;
 }
 
-h1{
-  font-size:42px;
-  letter-spacing:4px;
-  margin-bottom:20px;
-  font-weight:700;
-  animation:slideUp 1.5s ease forwards;
+header h1{
+  font-size:38px;
+  letter-spacing:3px;
+}
+
+header p{
+  margin-top:15px;
+  opacity:0.8;
+  font-size:15px;
+}
+
+/* SECTION */
+section{
+  padding:50px 20px;
+  max-width:900px;
+  margin:auto;
 }
 
 h2{
-  font-size:20px;
-  font-weight:300;
-  margin-bottom:40px;
-  opacity:0.8;
-  animation:fadeIn 3s ease;
+  text-align:center;
+  margin-bottom:30px;
+  font-size:24px;
 }
 
-.line{
-  width:80px;
-  height:2px;
-  background:var(--gold);
-  margin:20px auto 40px auto;
+/* CARD */
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:25px;
+  margin-bottom:20px;
+  border:1px solid rgba(212,175,55,0.2);
 }
 
+/* PRICE CARD */
+.price-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px;
+  margin-bottom:15px;
+  background:#141414;
+  border-radius:15px;
+  border:1px solid rgba(212,175,55,0.15);
+}
+
+.price-item strong{
+  font-size:18px;
+}
+
+.vip{
+  background:linear-gradient(45deg,#3a2f00,#111);
+  border:1px solid var(--gold);
+}
+
+.vip strong{
+  color:var(--gold);
+}
+
+/* HOW IT WORKS */
+.steps{
+  display:grid;
+  gap:15px;
+}
+
+.step{
+  background:#141414;
+  padding:20px;
+  border-radius:15px;
+  border:1px solid rgba(212,175,55,0.2);
+}
+
+/* BUTTON */
 .btn{
-  padding:14px 32px;
+  display:block;
+  text-align:center;
+  margin:30px auto;
+  padding:14px 30px;
   border:2px solid var(--gold);
-  border-radius:40px;
+  border-radius:30px;
   text-decoration:none;
   color:var(--gold);
-  margin:10px;
-  transition:0.4s;
-  display:inline-block;
+  width:220px;
+  transition:0.3s;
 }
 
 .btn:hover{
   background:var(--gold);
-  color:var(--black);
-  box-shadow:0 0 25px rgba(212,175,55,0.6);
+  color:black;
 }
 
-/* FOOTER TEXT */
-.footer{
-  position:absolute;
-  bottom:20px;
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 20px;
   font-size:13px;
-  opacity:0.5;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-@keyframes slideUp{
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  opacity:0.6;
 }
 
 /* MOBILE */
-@media(max-width:768px){
-  h1{
-    font-size:30px;
-  }
-  h2{
-    font-size:16px;
+@media(min-width:768px){
+  header h1{
+    font-size:48px;
   }
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="bg"></div>
-
-<div class="container">
+<header>
   <h1>AYIK ŞOFÖR</h1>
-  <div class="line"></div>
-  <h2>Alkol aldıysanız risk almayın.<br>Aracınızla güvenle evinize dönün.</h2>
+  <p>Alkol aldıysanız risk almayın. Aracınızla güvenle evinize dönün.</p>
+</header>
 
-  <div>
-    <a href="#" class="btn">Şoför Çağır</a>
-    <a href="#" class="btn">Uygulamayı İndir</a>
+<section>
+  <h2>Uygulama Amacı</h2>
+  <div class="card">
+    Ayık Şoför, alkol aldıktan sonra araç kullanmak istemeyen kullanıcılar için geliştirilmiş premium bir güvenli ulaşım sistemidir. 
+    Profesyonel şoförler aracınızı kullanarak sizi güvenli şekilde evinize ulaştırır.
+  </div>
+</section>
+
+<section>
+  <h2>Sistem Nasıl Çalışır?</h2>
+  <div class="steps">
+    <div class="step">1️⃣ Uygulama üzerinden konumunuzu paylaşın.</div>
+    <div class="step">2️⃣ En yakın profesyonel şoför size atanır.</div>
+    <div class="step">3️⃣ Şoförünüz aracınızı kullanarak sizi güvenle evinize ulaştırır.</div>
+    <div class="step">4️⃣ Yolculuk sonunda güvenli ödeme işlemi gerçekleştirilir.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Fiyat Listesi</h2>
+
+  <div class="price-item">
+    <div>
+      <div>Açılış</div>
+      <small>0-5 KM</small>
+    </div>
+    <strong>500 ₺</strong>
   </div>
 
-  <div class="footer">
-    © 2026 Ayık Şoför | Güvenli Yolculuk
+  <div class="price-item">
+    <div>
+      <div>Şehir İçi</div>
+      <small>5 KM sonrası +100 ₺</small>
+    </div>
+    <strong>+100 ₺</strong>
   </div>
-</div>
+
+  <div class="price-item">
+    <div>
+      <div>Premium Hizmet</div>
+      <small>15 KM</small>
+    </div>
+    <strong>1400 ₺</strong>
+  </div>
+
+  <div class="price-item">
+    <div>
+      <div>Park Halinde Bekleme</div>
+      <small>Saat başı</small>
+    </div>
+    <strong>250 ₺</strong>
+  </div>
+
+  <div class="price-item vip">
+    <div>
+      <div><strong>VIP HİZMET</strong></div>
+      <small>ÖZEL</small>
+    </div>
+    <strong>5000 ₺</strong>
+  </div>
+
+</section>
+
+<a href="#" class="btn">Uygulamayı İndir</a>
+
+<footer>
+© 2026 Ayık Şoför | Premium Güvenli Ulaşım
+</footer>
 
 </body>
 </html>
