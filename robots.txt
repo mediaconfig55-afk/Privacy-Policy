@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xn--ayksofr-f1a04c.com.tr/sitemap.xml
